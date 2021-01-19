@@ -7,7 +7,7 @@ require('dotenv').config({
 const environment = process.env.GATSBY_VTEX_ENVIRONMENT
 const workspace = process.env.GATSBY_VTEX_IO_WORKSPACE
 
-const STORE_ID = 'storecomponents'
+const STORE_ID = 'learning'
 
 const {
   NODE_ENV,
@@ -97,19 +97,6 @@ module.exports = {
             host: null,
           },
         },
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-netlify',
-      options: {
-        headers: {
-          '/preview': [
-            'Content-Security-Policy: frame-src https://*.myvtex.com/',
-          ],
-        },
-        transformHeaders,
-        mergeSecurityHeaders: false,
-        generateMatchPathRewrites: true,
       },
     },
     {
